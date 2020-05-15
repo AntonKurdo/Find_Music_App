@@ -12,6 +12,9 @@ dispatch => ({
     },
     onChangeInp: (value) => {
         dispatch({type: 'CHANGE_INPUT', payload: value})
+    },
+    onAddTrackToPlayList: (title, artist) => {
+        dispatch({type: 'ADD_TO_PLAYLIST', payload: {title, artist}})
     }
 })
 )(App)

@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
-import { createLogger } from 'redux-logger'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux';
-import reducer from './reducers/reducer';
+import { createLogger } from 'redux-logger';
+import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
+import { createStore, applyMiddleware } from 'redux';
+import { BrowserRouter as Router } from "react-router-dom";
+import reducer from './reducers/reducer';
+
 import { watchLoadData } from './sagas/sagaMusic';
 
  const logger = createLogger();
@@ -18,9 +20,11 @@ sagaMiddleware.run(watchLoadData)
  
 ReactDOM.render(
   <React.StrictMode>
-   <Provider store = {store}>
-      <App />
-    </Provider> 
+   <Router>
+      <Provider store = {store}>     
+          <App />
+      </Provider>
+    </Router>   
   </React.StrictMode>,
   document.getElementById('root')
 );

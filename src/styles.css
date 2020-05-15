@@ -6,6 +6,9 @@ h1 {
 h1:hover {
     cursor: pointer;
 }
+table {
+    width: 90%;
+}
 form {
     position: relative;
     width: 90%;
@@ -31,4 +34,65 @@ form {
     top: 0;
     right: 0;
     border-radius: 0 3px 3px 0;
+}
+.welcome_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 820px;
+}
+.btn_start {
+    width: 120px;
+    height: 50px;  
+    font-size: 22px;
+}
+
+
+.btn_add {
+    position: absolute;
+    right: 25%;
+    top: 20px;
+    color: green; 
+    font-size: 21px;
+}
+.btn_add:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+.btn_add:active {   
+    opacity: .5;
+}
+
+
+.playlist_cont {
+    min-height: 820px;
+}
+
+footer {
+    height: 70px;
+    background-color:#f8f9fa;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div {
+    margin-left: 20px;
+    position: relative;
+}
+footer div small {
+    font-family:cursive ;
+    position: absolute;
+    right: -20px;
+    bottom: -12px;
+    opacity: 0.8;
+    font-style: italic;
+}
+footer a {
+    margin-right: 70px;
+    color: gray;
+}
+footer a:hover {
+    color: black;
 }
