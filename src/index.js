@@ -4,19 +4,21 @@ import App from './containers/App';
 import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { BrowserRouter as Router } from "react-router-dom";
 import reducer from './reducers/reducer';
 
 import { watchLoadData } from './sagas/sagaMusic';
+import { watchLoadData1 } from './sagas/sagaMusic';
 
  const logger = createLogger();
  const sagaMiddleware = createSagaMiddleware();
 
- const store = createStore(reducer, applyMiddleware(logger, sagaMiddleware));
+ const store = createStore(reducer, compose(applyMiddleware(logger, sagaMiddleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
 
 sagaMiddleware.run(watchLoadData)
+// sagaMiddleware.run(watchLoadData1)
  
 ReactDOM.render(
   <React.StrictMode>
@@ -29,7 +31,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 

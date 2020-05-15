@@ -7,7 +7,7 @@ const initialState = [
 ]
 
 export default function (state = initialState, action) {
-    if(action.type === 'ADD_TO_PLAYLIST') {
+    if(action.type === 'ADD_TRACK_TO_PLAYLIST') {
         return [...state, action.payload]
     }
     return state

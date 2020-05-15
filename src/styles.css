@@ -69,6 +69,17 @@ form {
     min-height: 820px;
 }
 
+.paginationCont {
+    display: flex;
+    justify-content: center;
+}
+.page-item {
+    margin-right: 7px;
+}
+.page-item:hover {
+    cursor: pointer;
+    
+}
 footer {
     height: 70px;
     background-color:#f8f9fa;

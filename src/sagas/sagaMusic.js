@@ -1,15 +1,16 @@
 import { takeEvery, put, call, select }  from 'redux-saga/effects';
 import { putData } from '../actions/putData';
 import { LOAD_DATA } from '../actions/loadData';
-
+import { CHANGE_PAGE } from '../actions/changePage';
 
 
 
 function* workerLoadData() { 
     let title = yield select(state => state.requsetReducer);
+    let index = yield select(state => state.changePage);
     
     function fetchData() {       
-        return fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${title}`, {
+        return fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${title}&index=${index}`, {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
@@ -19,7 +20,7 @@ function* workerLoadData() {
         .then(response => response.json())    
     }
     const data = yield call(fetchData)   
-    yield put(putData(data.data))
+    yield put(putData(data))
    
 }
 
@@ -27,6 +28,9 @@ function* workerLoadData() {
 
 export function* watchLoadData() {
     yield takeEvery(LOAD_DATA, workerLoadData)
+}
+export function* watchLoadData1() {
+    yield takeEvery(CHANGE_PAGE, workerLoadData)
 }
 
 
