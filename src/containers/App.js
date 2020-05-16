@@ -4,7 +4,8 @@ import { loadData } from '../actions/loadData'
 
 export default connect(
 state => ({
-    data: state.dataReducer
+    data: state.dataReducer,
+    index: state.changePage.index
 }),
 dispatch => ({
     onClick: () => {
@@ -13,8 +14,8 @@ dispatch => ({
     onChangeInp: (value) => {
         dispatch({type: 'CHANGE_INPUT', payload: value})
     },
-    onAddTrackToPlayList: (title, artist) => {
-        dispatch({type: 'ADD_TRACK_TO_PLAYLIST', payload: {title, artist}})
+    onAddTrackToPlayList: (id, title, artist) => {
+        dispatch({type: 'ADD_TRACK_TO_PLAYLIST', payload: {id, title, artist}})
     }
 })
 )(App)

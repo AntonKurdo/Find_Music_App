@@ -5,17 +5,18 @@ import { connect } from 'react-redux';
 
 export default connect(
     state => ({
+        page: state.changePage.page,
         total: () => {
             let newArr = [];
-            for (let i = 1; i <= Math.ceil(state.dataReducer.total / 5); i++) {
+            for (let i = 1; i <= Math.ceil(state.dataReducer.total / 25); i++) {
                 newArr.push(i)
             }
             return newArr;
         }
     }),
     dispatch => ({
-        onChangePage: (index) => {
-            dispatch(changePage(index))
-        },
+        onChangePage: (index, page) => {
+            dispatch(changePage(index, page))
+        }     
     })
 )(Paginator)

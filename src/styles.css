@@ -14,6 +14,21 @@ form {
     width: 90%;
     margin: 0 auto;
 }
+
+.playlistItem_cont{
+    position: relative;
+}
+.playlist_btn_cont {
+    position: absolute;
+    right: 10px;
+    top: 6px; 
+    z-index: 1;
+}
+.playlist_btn_copy {            
+  margin-right: 10px;
+}
+
+
 .btn_remove {
     position: absolute;
     top: 0;
@@ -48,20 +63,24 @@ form {
     font-size: 22px;
 }
 
-
 .btn_add {
     position: absolute;
     right: 25%;
-    top: 20px;
+    top: calc(53% - 21px);
     color: green; 
     font-size: 21px;
+    border: none;
+    background-color: transparent;
 }
 .btn_add:hover {
     cursor: pointer;
     opacity: .8;
 }
 .btn_add:active {   
-    opacity: .5;
+    opacity: .5;    
+}
+.btn_add:focus {    
+   outline: none;
 }
 
 
@@ -75,6 +94,10 @@ form {
 }
 .page-item {
     margin-right: 7px;
+}
+.page-item ._active {
+   background-color: #007bff;
+   color: white;
 }
 .page-item:hover {
     cursor: pointer;

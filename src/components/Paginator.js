@@ -1,12 +1,9 @@
 import React from 'react'
 
-export default function Paginator({total, onChangePage}) {
-
-    function changePage(number, e) {
+export default function Paginator({page, total, onChangePage}) {  
+    function changePage(number) {
        let index = number !== 1 ? (number * 25) - 25 : 0;
-       onChangePage(index);
-       e.target.setAttribute('disabled', true)
-       console.log(e.target)
+       onChangePage(index, number);   
     }
     return (
         <nav className="paginationCont">
@@ -14,7 +11,12 @@ export default function Paginator({total, onChangePage}) {
                 {
                     total().map(item => {
                         return (
-                            <li onClick={changePage.bind(this, item)} key={item} className="page-item"><button className="page-link">{item}</button></li>
+                            <li onClick={changePage.bind(this, item)} key={item} className="page-item">
+                                <button 
+                                    className= {page === item ? "page-link _active" : "page-link" } 
+                                    disabled={page === item ? true : false}
+                                    >{item}</button>
+                            </li>
                         )
                     })
                 }       

@@ -7,6 +7,8 @@ state => ({
     playlist: state.playlistReducer
 }),
 dispatch => ({
-  
+    onRemoveTrackFromPlaylist: (id) => {
+        dispatch({type: "REMOVE_TRACK_FROM_PLAYLIST", payload: id})
+    }     
 })
 )(Playlist)

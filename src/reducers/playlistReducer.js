@@ -1,5 +1,6 @@
 const initialState = [
     {
+        id: 0,
         title: "Lose Your Self",
         artist: 'Eminem', 
         
@@ -8,7 +9,21 @@ const initialState = [
 
 export default function (state = initialState, action) {
     if(action.type === 'ADD_TRACK_TO_PLAYLIST') {
-        return [...state, action.payload]
+        state = [...state, action.payload];
+        localStorage.setItem('musicApp', JSON.stringify(state));
+        return state
     }
-    return state
+    if(action.type === 'REMOVE_TRACK_FROM_PLAYLIST') {
+      state =  state.filter(el => el.id !== action.payload);
+      localStorage.setItem('musicApp', JSON.stringify(state));
+      return state;      
+    }
+    
+    if(localStorage.musicApp) {
+       let data =  localStorage.getItem('musicApp')
+       return JSON.parse(data)
+    } else {
+        return state;
+    }
+    
 }
