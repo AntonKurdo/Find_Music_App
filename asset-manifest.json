@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Find_Music_App/static/css/main.8fc80550.chunk.css",
+    "main.js": "/Find_Music_App/static/js/main.1075eff9.chunk.js",
+    "main.js.map": "/Find_Music_App/static/js/main.1075eff9.chunk.js.map",
+    "runtime-main.js": "/Find_Music_App/static/js/runtime-main.057a5aa1.js",
+    "runtime-main.js.map": "/Find_Music_App/static/js/runtime-main.057a5aa1.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/Find_Music_App/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.71466559.chunk.js": "/Find_Music_App/static/js/2.71466559.chunk.js",
+    "static/js/2.71466559.chunk.js.map": "/Find_Music_App/static/js/2.71466559.chunk.js.map",
+    "index.html": "/Find_Music_App/index.html",
+    "precache-manifest.3dbbddf9809e0d440b08cdc8f5abd870.js": "/Find_Music_App/precache-manifest.3dbbddf9809e0d440b08cdc8f5abd870.js",
+    "service-worker.js": "/Find_Music_App/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/Find_Music_App/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.8fc80550.chunk.css.map": "/Find_Music_App/static/css/main.8fc80550.chunk.css.map",
+    "static/js/2.71466559.chunk.js.LICENSE.txt": "/Find_Music_App/static/js/2.71466559.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.057a5aa1.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.71466559.chunk.js",
+    "static/css/main.8fc80550.chunk.css",
+    "static/js/main.1075eff9.chunk.js"
+  ]
+}
