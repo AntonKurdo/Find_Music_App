@@ -18,7 +18,7 @@ import { watchLoadData1 } from './sagas/sagaMusic';
 
 
 sagaMiddleware.run(watchLoadData)
-// sagaMiddleware.run(watchLoadData1)
+sagaMiddleware.run(watchLoadData1)
  
 ReactDOM.render(
   <React.StrictMode>

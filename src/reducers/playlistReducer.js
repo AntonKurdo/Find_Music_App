@@ -1,10 +1,10 @@
 const initialState = [
-    {
-        id: 0,
-        title: "Lose Your Self",
-        artist: 'Eminem', 
+    // {
+    //     id: 0,
+    //     title: "Lose Your Self",
+    //     artist: 'Eminem', 
         
-    }
+    // }
 ]
 
 export default function (state = initialState, action) {
@@ -18,7 +18,7 @@ export default function (state = initialState, action) {
       localStorage.setItem('musicApp', JSON.stringify(state));
       return state;      
     }
-    
+
     if(localStorage.musicApp) {
        let data =  localStorage.getItem('musicApp')
        return JSON.parse(data)

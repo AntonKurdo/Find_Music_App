@@ -1,11 +1,11 @@
 import App from '../App';
 import { connect } from 'react-redux';
 import { loadData } from '../actions/loadData'
-
+import { changePage } from '../actions/changePage'
 export default connect(
 state => ({
     data: state.dataReducer,
-    index: state.changePage.index
+    index: state.changePage.index    
 }),
 dispatch => ({
     onClick: () => {
@@ -16,7 +16,10 @@ dispatch => ({
     },
     onAddTrackToPlayList: (id, title, artist) => {
         dispatch({type: 'ADD_TRACK_TO_PLAYLIST', payload: {id, title, artist}})
-    }
+    },
+    onChangePage: () => {
+        dispatch(changePage(0, 1))
+    }     
 })
 )(App)
 
