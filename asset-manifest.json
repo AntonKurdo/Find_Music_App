@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Find_Music_App/static/css/main.8fc80550.chunk.css",
-    "main.js": "/Find_Music_App/static/js/main.c64705d4.chunk.js",
-    "main.js.map": "/Find_Music_App/static/js/main.c64705d4.chunk.js.map",
+    "main.js": "/Find_Music_App/static/js/main.93798af2.chunk.js",
+    "main.js.map": "/Find_Music_App/static/js/main.93798af2.chunk.js.map",
     "runtime-main.js": "/Find_Music_App/static/js/runtime-main.057a5aa1.js",
     "runtime-main.js.map": "/Find_Music_App/static/js/runtime-main.057a5aa1.js.map",
     "static/css/2.829c9cb5.chunk.css": "/Find_Music_App/static/css/2.829c9cb5.chunk.css",
     "static/js/2.0b043f14.chunk.js": "/Find_Music_App/static/js/2.0b043f14.chunk.js",
     "static/js/2.0b043f14.chunk.js.map": "/Find_Music_App/static/js/2.0b043f14.chunk.js.map",
     "index.html": "/Find_Music_App/index.html",
-    "precache-manifest.259b163d4ac74283135bf15a9db4246b.js": "/Find_Music_App/precache-manifest.259b163d4ac74283135bf15a9db4246b.js",
+    "precache-manifest.02b1c1ad08df6fb6e43d2ab038ac6a92.js": "/Find_Music_App/precache-manifest.02b1c1ad08df6fb6e43d2ab038ac6a92.js",
     "service-worker.js": "/Find_Music_App/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/Find_Music_App/static/css/2.829c9cb5.chunk.css.map",
     "static/css/main.8fc80550.chunk.css.map": "/Find_Music_App/static/css/main.8fc80550.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.0b043f14.chunk.js",
     "static/css/main.8fc80550.chunk.css",
-    "static/js/main.c64705d4.chunk.js"
+    "static/js/main.93798af2.chunk.js"
   ]
 }
