@@ -6,7 +6,6 @@ export default connect(
 state => ({
     playlist: state.playlistReducer
 }),
-dispatch => ({
-  
+dispatch => ({  
 })
 )(Navbar)

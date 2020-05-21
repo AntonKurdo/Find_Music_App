@@ -8,7 +8,7 @@ state => ({
     index: state.changePage.index    
 }),
 dispatch => ({
-    onClick: () => {
+    onLoadData: () => {
         dispatch(loadData())
     },
     onChangeInp: (value) => {

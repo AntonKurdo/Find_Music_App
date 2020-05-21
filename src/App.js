@@ -13,11 +13,11 @@ import Paginator from './containers/Paginator'
 let audio = new Audio();
 let prevAud = '';
 
-export default function App({data, index, onClick, onChangeInp, onAddTrackToPlayList, onChangePage}) {
+export default function App({data, index, onLoadData, onChangeInp, onAddTrackToPlayList, onChangePage}) {
   const inputEl = useRef('')  
  
   useEffect(()=> {
-    onClick();
+    onLoadData();
   }, [])
   
   function titleClick() {
@@ -29,7 +29,7 @@ export default function App({data, index, onClick, onChangeInp, onAddTrackToPlay
       onChangeInp(inputEl.current.value)
     }      
     e.preventDefault();     
-    onClick();      
+    onLoadData();      
   }
   function removeInpText() {    
     inputEl.current.value = ''

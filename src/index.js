@@ -5,7 +5,7 @@ import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware, compose } from 'redux';
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import reducer from './reducers/reducer';
 
 import { watchLoadData } from './sagas/sagaMusic';
