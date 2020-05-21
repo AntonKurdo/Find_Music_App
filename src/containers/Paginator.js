@@ -17,6 +17,9 @@ export default connect(
     dispatch => ({
         onChangePage: (index, page) => {
             dispatch(changePage(index, page))
-        }     
+        },
+        onPutEmptyData: () => {
+            dispatch({type: 'PUT_DATA', payload: {data: []}})
+        } 
     })
 )(Paginator)

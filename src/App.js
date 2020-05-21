@@ -16,9 +16,11 @@ let prevAud = '';
 export default function App({data, index, onLoadData, onChangeInp, onAddTrackToPlayList, onChangePage}) {
   const inputEl = useRef('')  
  
+ 
   useEffect(()=> {
     onLoadData();
   }, [])
+
   
   function titleClick() {
     window.location.reload()
@@ -71,7 +73,13 @@ export default function App({data, index, onLoadData, onChangeInp, onAddTrackToP
                 <button onClick={handleClick} type="submit" className="btn btn-primary" >Search</button>
                 <div onClick={removeInpText} className='btn_remove'>❌</div>
               </form>  
-              <table className="table container" style={{marginTop: '20px'}}>
+            {data.data.length === 0 
+            ? (
+                    <div style={{width: '4rem', height: '4rem', position: 'relative', left: '47%', top: '50px'}} className="spinner-border text-primary" role="status">
+                      <span className="sr-only">Loading...</span>
+                    </div>                  
+              ) 
+              :<table className="table container" style={{marginTop: '20px'}}>
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -102,7 +110,8 @@ export default function App({data, index, onLoadData, onChangeInp, onAddTrackToP
                     })
                   }            
                     </tbody>
-                </table>          
+                </table>     
+                }     
           </div>          
           <Paginator />
       </Route>
