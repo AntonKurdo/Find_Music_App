@@ -1,11 +1,13 @@
-import App from '../App';
+import Tracks from '../components/Tracks';
 import { connect } from 'react-redux';
-import { loadData } from '../actions/loadData'
-import { changePage } from '../actions/changePage'
+import { loadData } from '../actions/loadData';
+import { changePage } from '../actions/changePage';
+
 export default connect(
 state => ({
     data: state.dataReducer,
-    index: state.changePage.index    
+    index: state.changePage.index,
+    playlist: state.playlistReducer    
 }),
 dispatch => ({
     onLoadData: () => {
@@ -19,7 +21,9 @@ dispatch => ({
     },
     onChangePage: () => {
         dispatch(changePage(0, 1))
+    },
+    onPutEmptyData: () => {
+        dispatch({type: 'PUT_DATA', payload: {data: []}})
     }     
 })
-)(App)
-
+)(Tracks)

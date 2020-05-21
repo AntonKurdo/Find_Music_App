@@ -19,6 +19,7 @@ function* workerLoadData() {
     }
     const data = yield call(fetchData)   
     yield put(putData(data))
+    console.log(data.data)
    
 }
 

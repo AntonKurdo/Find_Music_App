@@ -11,12 +11,10 @@ export default function (state = initialState, action) {
     if(action.type === 'ADD_TRACK_TO_PLAYLIST') {
         state = [...state, action.payload];
         localStorage.setItem('musicApp', JSON.stringify(state));
-        return state
+        return state;
     }
     if(action.type === 'REMOVE_TRACK_FROM_PLAYLIST') {
-      state =  state.filter(el => el.id !== action.payload);
-      localStorage.setItem('musicApp', JSON.stringify(state));
-      return state;      
+        return state.filter(el => el.id !== action.payload);         
     }
 
     if(localStorage.musicApp) {

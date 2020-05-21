@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import App from './App';
 import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
